@@ -10,7 +10,6 @@ const FILES_TO_CACHE = [
     "/icon-192x192.png",
     "/icon-512x512.png",
 ];
-
 const PRECACHE = "precache-v1";
 const RUNTIME = "runtime";
 
@@ -22,7 +21,6 @@ self.addEventListener("install", (event) => {
             .then(self.skipWaiting())
     );
 });
-
 // The activate handler takes care of cleaning up old caches.
 self.addEventListener("activate", (event) => {
     const currentCaches = [PRECACHE, RUNTIME];
